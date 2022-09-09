@@ -3,7 +3,7 @@ import java.util.Objects;
 public class Employee {
 
 
-    private String FIO;
+    private String fio;
     private int Department;
     private int Salary;
     private static int Counter = 0;
@@ -19,7 +19,7 @@ public class Employee {
     }
 
     public String getFIO() {
-        return this.FIO;
+        return this.fio;
     }
 
     public int getSalary() {
@@ -28,7 +28,7 @@ public class Employee {
 
     // Setter's
     public void SetFIO(String fio) {
-        this.FIO = fio;
+        this.fio = fio;
     }
 
     public void SetSalary(int salary) {
@@ -46,7 +46,7 @@ public class Employee {
 
     @Override
     public String toString() {
-        return   Id+ " "+FIO + " " + Department +" "+ Salary;
+        return   Id+ " "+fio + " " + Department +" "+ Salary;
 
     }
 
@@ -55,17 +55,17 @@ public class Employee {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Employee employee = (Employee) o;
-        return Department == employee.Department && Salary == employee.Salary && Id == employee.Id && FIO.equals(employee.FIO);
+        return Department == employee.Department && Salary == employee.Salary && Id == employee.Id && fio.equals(employee.fio);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(FIO, Department, Salary, Id);
+        return Objects.hash(fio, Department, Salary, Id);
     }
 
-    // Constructor
-    public <salary> Employee(String fio, int department, int salary) {
-        FIO = fio;
+
+    public Employee(String fio1, int department, int salary) {
+        fio = fio1;
         Department = department;
         Salary = salary;
         Id = Counter++;
