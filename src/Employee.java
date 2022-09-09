@@ -26,7 +26,7 @@ public class Employee {
         return this.Salary;
     }
 
-    // Setter's
+
     public void SetFIO(String fio) {
         this.fio = fio;
     }
