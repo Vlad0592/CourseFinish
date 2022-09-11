@@ -1,11 +1,11 @@
 public class Main {
 
 
-    public static String resultFioFIO(Employee[] employee) {
-        int tmpId2 = 0;
+    public static String resultAllEmployeeDetails(Employee[] employee) {
+
         String tmp = employee[0].getFIO();
         for (int i = 1; i < employee.length; i++) {
-            tmpId2 = employee[i].getId();
+
 
             System.out.println(employee[i].getFIO());
 
@@ -15,21 +15,21 @@ public class Main {
     }
 
 
-
-    public static int resultFio(Employee[] employee) {
+    public static Object resultFio(Employee[] employee) {
         for (int i = 0; i < employee.length; i++)
             System.out.println(employee[i].toString());
-        return 0;
+        return null;
     }
 
 
-    public static String resultFioToString(Employee[] employee, int id) {
+    public static String resultAllData(Employee[] employee, int id) {
         for (int i = 0; i < employee.length; i++) {
             if (employee[i].getId() == id) {
                 return employee[i].toString();
             }
         }
-        return "none";
+
+        return null;
     }
 
 
@@ -78,24 +78,24 @@ public class Main {
     public static void main(String[] args) {
         Employee[] employee = new Employee[10];
 
-        employee[0] = new Employee("bobych", 1, 1_000);
-        employee[1] = new Employee("fdvdvvdfv", 2, 50);
-        employee[2] = new Employee("dfdfdfdf", 3, 100);
-        employee[3] = new Employee("efewwef", 4, 200);
-        employee[4] = new Employee("erefewfewf", 5, 2400);
-        employee[5] = new Employee("ewfwefwefwef", 5, 111);
-        employee[6] = new Employee("ewfeew", 1, 525);
-        employee[7] = new Employee("efweefffs", 2, 240);
-        employee[8] = new Employee("qwqeweded", 3, 230);
-        employee[9] = new Employee("bobych", 4, 250);
+        employee[0] = new Employee("Валя", 1, 1_000);
+        employee[1] = new Employee("Виталий", 2, 50);
+        employee[2] = new Employee("Валера", 3, 100);
+        employee[3] = new Employee("Сергей", 4, 200);
+        employee[4] = new Employee("Саша", 5, 2400);
+        employee[5] = new Employee("Гоша", 5, 111);
+        employee[6] = new Employee("Миша", 1, 525);
+        employee[7] = new Employee("Влад", 2, 240);
+        employee[8] = new Employee("Леша", 3, 230);
+        employee[9] = new Employee("Гриша", 4, 250);
 
 
         System.out.println(resultFio(employee));
-        System.out.println(resultFioFIO(employee));
+        System.out.println(resultAllEmployeeDetails(employee));
         System.out.println("sum = " + salarySum(employee));
         System.out.println("ave = " + salaryAverage(employee));
-        System.out.println(" min " + resultFioToString(employee, salaryMin(employee)));
-        System.out.println(" max " + resultFioToString(employee, salaryMax(employee)));
+        System.out.println(" min " + resultAllData(employee, salaryMin(employee)));
+        System.out.println(" max " + resultAllData(employee, salaryMax(employee)));
 
     }
 
