@@ -2,14 +2,19 @@ public class Main {
 
 
     public static String resultFioFIO(Employee[] employee) {
-        double tmpId2 = 0;
+        int tmpId2 = 0;
         String tmp = employee[0].getFIO();
         for (int i = 1; i < employee.length; i++) {
             tmpId2 = employee[i].getId();
+
             System.out.println(employee[i].getFIO());
+
+
         }
         return tmp;
     }
+
+
 
     public static int resultFio(Employee[] employee) {
         for (int i = 0; i < employee.length; i++)
@@ -67,21 +72,21 @@ public class Main {
 
         }
 
-        return  tmpId;
+        return tmpId;
     }
 
     public static void main(String[] args) {
         Employee[] employee = new Employee[10];
 
         employee[0] = new Employee("bobych", 1, 1_000);
-        employee[1] = new Employee("bobych", 2, 50);
-        employee[2] = new Employee("bobych", 3, 100);
-        employee[3] = new Employee("bobych", 4, 200);
-        employee[4] = new Employee("bobych", 5, 2400);
-        employee[5] = new Employee("bobych", 5, 111);
-        employee[6] = new Employee("bobych", 1, 525);
-        employee[7] = new Employee("bobych", 2, 240);
-        employee[8] = new Employee("bobych", 3, 230);
+        employee[1] = new Employee("fdvdvvdfv", 2, 50);
+        employee[2] = new Employee("dfdfdfdf", 3, 100);
+        employee[3] = new Employee("efewwef", 4, 200);
+        employee[4] = new Employee("erefewfewf", 5, 2400);
+        employee[5] = new Employee("ewfwefwefwef", 5, 111);
+        employee[6] = new Employee("ewfeew", 1, 525);
+        employee[7] = new Employee("efweefffs", 2, 240);
+        employee[8] = new Employee("qwqeweded", 3, 230);
         employee[9] = new Employee("bobych", 4, 250);
 
 
