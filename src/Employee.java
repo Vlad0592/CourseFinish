@@ -25,12 +25,9 @@ public class Employee {
     public int getSalary() {
         return this.salary;
     }
-
-
     public void SetSalary(int salary) {
         this.salary = salary;
     }
-
     public void SetDepartment(int department) {
         this.department = department;
     }
@@ -38,15 +35,11 @@ public class Employee {
     public void setId() {
         this.id = getId();
     }
-
-
     @Override
     public String toString() {
         return id + " " + fio + " " + department + " " + salary;
 
     }
-
-
     public Employee(String fio1, int dep, int sal) {
         fio = fio1;
         department = dep;
