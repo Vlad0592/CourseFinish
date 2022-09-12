@@ -11,7 +11,7 @@ public class Main {
         }
         return tmp;
     }
-    public static Object resultFio(Employee[] employee) {
+    public static String resultFio(Employee[] employee) {
         for (int i = 0; i < employee.length; i++)
             System.out.println(employee[i].toString());
         return null;
@@ -22,6 +22,7 @@ public class Main {
                 return employee[i].toString();
             }
         }
+
 
         return null;
     }

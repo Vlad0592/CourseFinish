@@ -32,9 +32,7 @@ public class Employee {
         this.department = department;
     }
 
-    public void setId() {
-        this.id = getId();
-    }
+
     @Override
     public String toString() {
         return id + " " + fio + " " + department + " " + salary;
