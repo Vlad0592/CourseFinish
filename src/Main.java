@@ -1,7 +1,7 @@
 public class Main {
     public static String resultAllEmployeeDetails(Employee[] employee) {
 
-        String tmp = employee[0].getFIO();
+        String result = employee[0].getFIO();
         for (int i = 1; i < employee.length; i++) {
 
 
@@ -9,7 +9,7 @@ public class Main {
 
 
         }
-        return tmp;
+        return result;
     }
     public static String resultFio(Employee[] employee) {
         for (int i = 0; i < employee.length; i++)
@@ -35,34 +35,34 @@ public class Main {
         return sum;
     }
     public static int salaryMin(Employee[] employee) {
-        int tmpId1 = 0;
+        int result = 0;
         int tmp = employee[0].getSalary();
         for (int i = 1; i < employee.length; i++) {
             if (tmp > employee[i].getSalary()) {
-                tmpId1 = employee[i].getId();
+                result = employee[i].getId();
                 tmp = employee[i].getSalary();
             }
 
         }
 
-        return tmpId1;
+        return result;
     }
     public static int salaryAverage(Employee[] employee) {
 
         return salarySum(employee) / employee.length;
     }
     public static int salaryMax(Employee[] employee) {
-        int tmpId = 0;
+        int result = 0;
         int tmp = employee[0].getSalary();
         for (int i = 1; i < employee.length; i++) {
             if (tmp < employee[i].getSalary()) {
-                tmpId = employee[i].getId();
+                result = employee[i].getId();
                 tmp = employee[i].getSalary();
             }
 
         }
 
-        return tmpId;
+        return result;
     }
     public static void main(String[] args) {
         Employee[] employee = new Employee[10];
